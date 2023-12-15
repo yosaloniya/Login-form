@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_640.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animatebg 5s linear infinite;
+}
+
+@keyframes animatebg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-box {
+    position: relative;
+    height: 450px;
+    width: 400px;
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+
+.login-box h2 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+
+.input-box {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 310px;
+    margin: 30px 0px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+ top: -5px;
+}
+
+.remember-forget a {
+    text-decoration: none;
+    color: white;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.remember-forget {
+    margin: -15px 0 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input {
+    margin-right: 3px;
+}
+
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 48px;
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.register-link {
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-link p a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+
+}
+
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.input-box input {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    width: 100%;
+    height: 50px;
+    padding: 0 30px 0 5px;
+}
